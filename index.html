@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -68,6 +68,36 @@
 
         .slide.active {
             opacity: 1;
+        }
+
+        /* RENDEZVÉNY CÉLJA - UGYANAKKORA MINT A SLIDESHOW */
+        #cel {
+            max-width: 850px;
+            height: 500px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #fff8e1, #fffefb);
+            text-align: center;
+            padding: 2rem;
+            color: #000;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cel h2 {
+            font-size: 2rem;
+            color: #ff8f00;
+            margin-bottom: 1.5rem;
+        }
+
+        #cel p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+            max-width: 700px;
         }
 
         #alaprajz {
@@ -303,6 +333,12 @@
             .slideshow {
                 height: 300px; /* Kisebb magasság mobilon */
             }
+            
+            /* Reszponzív rendezvény célja */
+            #cel {
+                height: auto;
+                padding: 1.5rem;
+            }
         }
 
         /* 💭 Gondolatfelhő (tooltip) stílus */
@@ -343,30 +379,6 @@
                 transform: translateY(0);
             }
         }
-
-        #cel {
-            background: linear-gradient(135deg, #fff8e1, #fffefb);
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #000;
-            margin-bottom: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-        }
-
-            #cel h2 {
-                font-size: 2rem;
-                color: #ff8f00;
-                margin-bottom: 1.5rem;
-            }
-
-            #cel p {
-                max-width: 800px;
-                margin: auto;
-                font-size: 1.1rem;
-                line-height: 1.7;
-                color: #333;
-            }
 
         .fade-in {
             opacity: 0;
@@ -541,26 +553,21 @@
         <div class="slideshow">
             <div class="slide active"><img src="helyszin/Színpad1.jpg" alt="Kép 1"></div>
             <div class="slide"><img src="helyszin/Színpad2.jpg" alt="Kép 2"></div>
-            <div class="slide"><img src="helyszin/Tömeg6.jpeg" alt="Kép 3"></div>
             <div class="slide"><img src="helyszin/Tömeg1.jpg" alt="Kép 4"></div>
             <div class="slide"><img src="helyszin/Tömeg2.jpg" alt="Kép 5"></div>
             <div class="slide"><img src="helyszin/Tömeg3.jpg" alt="Kép 6"></div>
-            <div class="slide"><img src="helyszin/Tömeg4.jpg" alt="Kép 7"></div>
-            <div class="slide"><img src="helyszin/Tömeg5.jpg" alt="Kép 8"></div>
-            <div class="slide"><img src="helyszin/Tömeg7.jpeg" alt="Kép 8"></div>
-
+           
         </div>
-         <section id="cel" class="fade-up">
-                <div class="container">
-                    <h2>Rendezvény célja</h2>
-                    <p>
-                        A 1. Mátészalkai SzakmaFeszt célja, hogy egy helyre gyűjtse a régió meghatározó vállalkozásait,
-                        oktatási intézményeit és szakembereit. Az esemény lehetőséget teremt a tapasztalatcserére,
-                        az új technológiák és fejlesztések bemutatására, valamint a fiatalok pályaválasztásának támogatására.
-                    </p>
-                </div>
-            </section>
     </header>
+
+    <section id="cel" class="fade-up">
+        <h2>Rendezvény célja</h2>
+        <p>
+            A 1. Mátészalkai SzakmaFeszt célja, hogy egy helyre gyűjtse a régió meghatározó vállalkozásait,
+            oktatási intézményeit és szakembereit. Az esemény lehetőséget teremt a tapasztalatcserére,
+            az új technológiák és fejlesztések bemutatására, valamint a fiatalok pályaválasztásának támogatására.
+        </p>
+    </section>
 
     <!-- ALAPRAJZ -->
     <section id="alaprajz" class="fade-up">
@@ -582,17 +589,13 @@ Email: nagykallo.budai@gmail.com" onclick="location.href='#ceg2'">
                 <div class="ceg-box red" data-info="Mátészalka Gépészeti Technikum
 Cím: 4700 Mátészalka, Kölcsey u. 12.
 Email: mszgepesz@gmail.com" onclick="location.href='#ceg3'">
-                    Mátészalka Gépész
+                    MSZC Gépészeti Technikum és Kollégium
                 </div>
-                <div class="ceg-box red" data-info="Mátészalka Gépészeti Technikum
-Cím: 4700 Mátészalka, Kölcsey u. 12.
-Email: titkarsag@gepeszeti.hu" onclick="location.href='#ceg4'">
-                    Mátészalka Gépész
-                </div>
+                
                 <div class="ceg-box blue" data-info="Déri Miksa Technikum
 Cím:  4700 Mátészalka, Baross László u. 11
 Kapcsolat: derimiksa@iskola.hu" onclick="location.href='#ceg5'">
-                    Déri Miksa
+                   MSZC Déri Miksa Technikum, Szakképző Iskola és Kollégium
                 </div>
             </div>
 
@@ -607,13 +610,13 @@ Email: mateszalkark@szabolcs.police.hu." onclick="location.href='#ceg18'">
                 <div class="ceg-box purple" data-info="Büntetés-végrehajtás
 Cím: 4765 Csenger, Jánosi út 3
 Email: csenger.uk@bv.gov.hu" onclick="location.href='#ceg6'">
-                    Büntetés-végrehajtás
+                    Csengeri Országos Büntetés-végrehajtási Intézet
                 </div>
 
                 <div class="ceg-box yellow" data-info="NOBILIS
 Cím: 4700 Mátészalka, Almáskert u. 14.
 Email: webshop@nobilis.hu" onclick="location.href='#ceg7'">
-                    NOBILIS
+                    NOBILIS Zrt
                 </div>
 
                 <div class="ceg-box green" data-info="Szatmár Optika Kft.
@@ -625,13 +628,18 @@ Email: info@szatmaroptika.hu" onclick="location.href='#ceg8'">
                 <div class="ceg-box blue" data-info="MOM Zrt.
 Cím: 4700 Mátészalka, Ipari út 16.
 Email: hr@momzrt.hu" onclick="location.href='#ceg9'">
-                    MOM
+                    MOM Zrt
                 </div>
 
-                <div class="ceg-box cyan" data-info="Munka.hu
+                <div class="ceg-box yellow" data-info="Munka.hu
 Cím: 4400 Mátészalka, Állás utca 3.
 Email: info@munka.hu" onclick="location.href='#ceg10'">
                     Munka.hu
+                </div>
+                  <div class="ceg-box red" data-info="Tűzoltóság
+Cím: 4700 Mátészalka, Alkotmány út 1.
+Email:mateszalka.hot@katved.gov.hu" onclick="location.href='#ceg19'">
+                    Mátészalkai Hivatásos Tűzoltó-parancsnokság
                 </div>
             </div>
 
@@ -640,27 +648,27 @@ Email: info@munka.hu" onclick="location.href='#ceg10'">
                 <div class="ceg-box blue" data-info=" ZEISS
                      Cím: Mátészalka, Ernst Abbe utca 1-2, 4700
 Email: hr@zeiss.com" onclick="location.href='#ceg11'">
-                    ZEISS
+                    Carl Zeiss AG
                 </div>
                 <div class="ceg-box yellow" data-info="Parmen
 Cím: 4722 Nyírmeggyes, Fehér tag 1171/1.
 Email: parmenkonzerv@parmen.hu" onclick="location.href='#ceg12'">
-                    Parmen
+                    Parmen Konzervipari Zrt.
                 </div>
                 <div class="ceg-box red" data-info="Pöttyös Túrórudi
 Cím: 4700 Mátészalka, Ipari út 10.
 Email: vevoszolgalat@frieslandcampina.com" onclick="location.href='#ceg13'">
-                    Pöttyös TúróRudi
+                    Hungária Zrt. Mátészalkai Tejüzeme
                 </div>
                 <div class="ceg-box darkblue" data-info="HOYA
 Cím: 4700 Mátészalka, Ipari út 18.
 Email: info@hoya.com" onclick="location.href='#ceg14'">
-                    HOYA
+                    Hoya Szemüveglencse Gyártó Magyarország Zrt.
                 </div>
                 <div class="ceg-box green" data-info="MSG Szerelvénygyártó Kft.
 Cím: 4700 Mátészalka, Ipari út 6.
 Email: msgkft@msgkft.com" onclick="location.href='#ceg15'">
-                    MSG
+                    Mátészalkai Szerelvénygyártó Kft.
                 </div>
                 <div class="ceg-box yellow" data-info="McDonald's
 Cím: 4700 Mátészalka, Szabolcs utca 1.
@@ -720,7 +728,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="showSlideshow(['budai/plakát1.jpg','budai/plakát2.jpg','budai/plakát3.jpg'])">Szórólap</button>
+                    <button onclick="showSlideshow(['budai/plakát1.jpg','budai/plakát2.jpg'])">Szórólap</button>
                     <button onclick="showSlideshow(['budai/stand1.jpg','budai/stand2.jpg','budai/stand3.jpg','budai/erdekeltseg1.jpg','budai/erdekeltseg2.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
@@ -733,7 +741,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/gepeszlogo.jpg" alt="Mátészalka Gépészeti Technikum logo">
             </div>
             <div class="ceg-content">
-                <h3>Mátészalka Gépészeti Technikum és Kollégium</h3>
+                <h3>MSZC Gépészeti Technikum és Kollégium</h3>
                 <p><strong>Cím:</strong> 4700 Mátészalka, Kölcsey u. 12.</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> Titkárság<br>
@@ -749,35 +757,13 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
             </div>
         </div>
 
-        <!-- GÉPÉSZETI cég -->
-        <div class="ceg" id="ceg4">
-            <div class="ceg-logo">
-                <img src="logo/gepeszlogo.jpg" alt="Mátészalka Gépészeti Technikum logo">
-            </div>
-            <div class="ceg-content">
-                <h3>Mátészalka Gépészeti Technikum és Kollégium</h3>
-                <p><strong>Cím:</strong> 4700 Mátészalka, Kölcsey u. 12.</p>
-                <p>
-                    <strong>Kapcsolattartó:</strong> Titkárság<br>
-                    <strong>Tel:</strong> (44) 500-185 és (44) 502-944<br>
-                    <strong>Email:</strong> titkarsag@gepeszeti.hu
-                </p>
-
-                <div class="mini-menu">
-                    <button onclick="openModal('gepesz1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['gepesz2.jpg','gepesz3.jpg'])">Stand képek</button>
-                </div>
-                <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
-            </div>
-        </div>
-
         <!-- DÉRI cég -->
         <div class="ceg" id="ceg5">
             <div class="ceg-logo">
                 <img src="logo/derilogo.png" alt="Déri Miksa Technikum logo">
             </div>
             <div class="ceg-content">
-                <h3>Déri Miksa Technikum</h3>
+                <h3>MSZC Déri Miksa Technikum, Szakképző Iskola és Kollégium</h3>
                 <p><strong>Cím:</strong> 4700 Mátészalka, Baross László u. 11</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> Titkárság<br>
@@ -821,7 +807,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/bunteteslogo.jpg" alt="Büntetés-végrehajtás logo">
             </div>
             <div class="ceg-content">
-                <h3>Büntetés-végrehajtás</h3>
+                <h3>Csengeri Országos Büntetés-végrehajtási Intézet</h3>
                 <p><strong>Cím:</strong> 4765 Csenger, Jánosi út 3</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> Matos Máté bv. ezredes mb. parancsnok<br>
@@ -830,8 +816,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('buntetes1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['buntetes2.jpg'])">Stand képek</button>
+                    <button onclick="showSlideshow(['vegrehajtas/Plakát1.jpg','vegrehajtas/Plakát2.jpg'])">Szórólap</button>
+                    <button onclick="showSlideshow(['vegrehajtas/Stand.jpg','vegrehajtas/Stand2.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -843,7 +829,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/nobilislogo.jpg" alt="NOBILIS logo">
             </div>
             <div class="ceg-content">
-                <h3>NOBILIS</h3>
+                <h3>NOBILIS Zrt</h3>
                 <p><strong>Cím:</strong> 4700 Mátészalka, Almáskert u 14</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> Titkárság<br>
@@ -852,8 +838,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('nobilis1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['nobilis2.jpg'])">Stand képek</button>
+                    <button onclick="showSlideshow(['nobilis/plakat1.jpg','nobilis/plakat2.jpg'])">Szórólap</button>
+                    <button onclick="showSlideshow(['nobilis/stand1.jpg','nobilis/stand2.jpg','nobilis/stand3.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -874,8 +860,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('szatmaro1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['szatmaro2.jpg'])">Stand képek</button>
+                    <button onclick="openModal('szatmar/plakat.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['szatmar/stand1.jpg','szatmar/stand2.jpg','szatmar/termék.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -887,7 +873,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/momlogo.png" alt="MOM logo">
             </div>
             <div class="ceg-content">
-                <h3>MOM</h3>
+                <h3>MOM Zrt</h3>
                 <p><strong>Cím:</strong> Mátészalka, Ipari út 16, 4700</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> HR<br>
@@ -896,8 +882,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('mom1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['rendorseg2.jpg','rendorseg3.jpg'])">Stand képek</button>
+                    <button onclick="openModal('mom/plakat.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['mom/stand1.jpg','mom/stand2.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -916,7 +902,27 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
 
                 <div class="mini-menu">
                     <button onclick="openModal('munka1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['munka2.jpg'])">Stand képek</button>
+                    <button onclick="showSlideshow(['munka/Stand1.jpg','munka/Stand2.jpg'])">Stand képek</button>
+                </div>
+                <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
+            </div>
+        </div>
+<div class="ceg" id="ceg19">
+            <div class="ceg-logo">
+                <img src="logo/tuzoltosaglogo.png" alt="tüzoltosag">
+            </div>
+            <div class="ceg-content">
+                <h3>Mátészalkai Hivatásos Tűzoltó-parancsnokság</h3>
+                <p><strong>Cím:</strong> 4700 Mátészalka Alkotmány út 1..</p>
+                <p>
+                    <strong>Kapcsolattartó:</strong>Lipták Gábor tűzoltó alezredes<br>
+                    <strong>Tel:</strong> (+36-44) 418-134<br>
+                    <strong>Email:</strong> mateszalka.hot@katved.gov.hu
+                </p>
+
+                <div class="mini-menu">
+                    <button onclick="openModal('tuzoltosag/')">Szórólap</button>
+                    <button onclick="showSlideshow(['tuzoltosag/bemutato.png','tuzoltosag/stand1.jpg','tuzoltosag/stand2.jpg','tuzoltosag/stand3.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -928,7 +934,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/zeisslogo.png" alt="ZEISS logo">
             </div>
             <div class="ceg-content">
-                <h3>ZEISS</h3>
+                <h3>Carl Zeiss AG</h3>
                 <p><strong>Cím:</strong> Mátészalka, Ernst Abbe utca 1-2, 4700</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> HR<br>
@@ -937,8 +943,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('zeiss3.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['zeiss1.jpg','zeiss2.jpg'])">Stand képek</button>
+                    <button onclick="openModal('zeiss/Plakát1.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['zeiss/Stand1.jpg','zeiss/Stand2.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -950,7 +956,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/parmenlogo.png" alt="Parmen logo">
             </div>
             <div class="ceg-content">
-                <h3>Parmen</h3>
+                <h3>Parmen Konzervipari Zrt.</h3>
                 <p><strong>Cím:</strong> 4722 Nyírmeggyes, Fehér tag 1171/1.</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> HR<br>
@@ -959,8 +965,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('parmen1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['parmen2.jpg','parmen3.jpg'])">Stand képek</button>
+                    <button onclick="openModal('parmen/plakat2.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['parmen/stand1.jpg','parmen/stand2.jpg','parmen/termek1.jpeg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -972,7 +978,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/pottyoslogo.png" alt="Pöttyös Túrórudi logo">
             </div>
             <div class="ceg-content">
-                <h3>Pöttyös Túrórudi</h3>
+                <h3>Hungária Zrt. Mátészalkai Tejüzeme</h3>
                 <p><strong>Cím:</strong> 4700 Mátészalka, Ipari út 10.</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> Vevőszolgálat<br>
@@ -982,7 +988,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
 
                 <div class="mini-menu">
                     <button onclick="openModal('pottyos1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['pottyos2.jpg','pottyos3.jpg'])">Stand képek</button>
+                    <button onclick="showSlideshow(['pottyos/stand1.jpg','pottyos/stand2.jpg','pottyos/termék.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -994,7 +1000,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/hoyalogo.png" alt="Hoya logo">
             </div>
             <div class="ceg-content">
-                <h3>Hoya</h3>
+                <h3>Hoya Szemüveglencse Gyártó Magyarország Zrt.</h3>
                 <p><strong>Cím:</strong> Mátészalka, Ipari út 18, 4700</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> HR<br>
@@ -1003,8 +1009,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('hoya1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['hoya2.jpg'])">Stand képek</button>
+                    <button onclick="openModal('hoya/plakat1.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['hoya/stand2.jpeg','hoya/bemutatas2.jpeg','hoya/ajandek1.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -1016,7 +1022,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 <img src="logo/msglogo.png" alt="MSG logo">
             </div>
             <div class="ceg-content">
-                <h3>MSG</h3>
+                <h3>Mátészalkai Szerelvénygyártó Kft.</h3>
                 <p><strong>Cím:</strong> 4700 Mátészalka, Ipari út 6.</p>
                 <p>
                     <strong>Kapcsolattartó:</strong> HR<br>
@@ -1025,8 +1031,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('msg1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['msg2.jpg'])">Stand képek</button>
+                    <button onclick="openModal('msg/plakat2.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['msg/stand1.jpg','msg/stand2.jpg','msg/termek1.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -1047,8 +1053,8 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
                 </p>
 
                 <div class="mini-menu">
-                    <button onclick="openModal('meki1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['meki2.jpg'])">Stand képek</button>
+                    <button onclick="openModal('meki/plakat1.jpg')">Szórólap</button>
+                    <button onclick="showSlideshow(['meki/stand.jpg','meki/stand2.jpg','meki/stand3.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -1070,7 +1076,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
 
                 <div class="mini-menu">
                     <button onclick="openModal('baross1.jpg')">Szórólap</button>
-                    <button onclick="showSlideshow(['baross2.jpg','baross3.jpg'])">Stand képek</button>
+                    <button onclick="showSlideshow(['baros/stand.jpg','baros/stand1.jpg','baros/stand3.jpg'])">Stand képek</button>
                 </div>
                 <a href="#alaprajz" class="back-to-top">⬆ Vissza az alaprajzhoz</a>
             </div>
@@ -1085,7 +1091,7 @@ Email: info@baross.hu" onclick="location.href='#ceg17'">
     </div>
 
 <!-- MÉDIA MEGJELENÉSEK -->
-<section id="media" class="fade-up" style="background: linear-gradient(180deg, #ffb300, #ffb300); padding: 3rem 1rem; border-radius: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center; margin-top: 2rem;">
+<section id="media" class="fade-up" style="background: linear-gradient(180deg, #ffb300, #ffb300); padding: 3rem 1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center; margin-top: 2rem;">
     <h2 style="color: black; font-size: 2rem; margin-bottom: 2rem;">Média megjelenések</h2>
 
     <div class="grid" style="max-width: 1000px; margin: auto; gap: 2rem;">
